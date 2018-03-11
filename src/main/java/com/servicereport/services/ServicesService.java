@@ -27,6 +27,14 @@ public class ServicesService {
 		return localServicesBean;
 	}
 	
+	public ServicesBean editService(ServicesBean servicesBeanArg){
+		 return servicesDao.editServie(servicesBeanArg);
+	}
+	
+	public ServicesBean deleteService(ServicesBean servicesBeanArg){
+		 return servicesDao.deleteService(servicesBeanArg);
+	}
+	
 	public List<ServicesBean> getServices(){
 		return servicesDao.getAllServices();
 	}

@@ -61,4 +61,23 @@ public class ServicesDaoImpl implements ServicesDao{
 		session.getTransaction().commit();
 		return localServiceBeans;
 	}
+
+	public ServicesBean editServie(ServicesBean servicesBeanArg) {
+		
+		Session session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		session.update(servicesBeanArg);
+		session.getTransaction().commit();
+		return servicesBeanArg;
+	}
+	
+	public ServicesBean deleteService(ServicesBean servicesBeanArg){
+		
+		Session session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		session.delete(servicesBeanArg);
+		session.getTransaction().commit();
+		return servicesBeanArg;
+		
+	}
 }
