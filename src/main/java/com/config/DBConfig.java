@@ -40,7 +40,7 @@ public class DBConfig {
 		
 		BasicDataSource basicDataSource = new BasicDataSource();
 		basicDataSource.setDriverClassName("org.h2.Driver");
-		basicDataSource.setUrl("jdbc:h2:tcp://localhost/~/parlour");
+		basicDataSource.setUrl("jdbc:h2:tcp://localhost/~/parlourdev");
 		basicDataSource.setUsername("harsha");
 		basicDataSource.setPassword("harsha123");
 		return basicDataSource;

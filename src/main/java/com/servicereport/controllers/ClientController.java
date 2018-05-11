@@ -21,20 +21,19 @@ public class ClientController {
 
 	@Autowired
 	private ClientService clientService;
-	
-	@RequestMapping(value="client/addClient",method=RequestMethod.POST)
-	public ResponseEntity<?> addClient(@RequestBody ClientBean clientBeanArg){
-		  
+
+	@RequestMapping(value = "client/addClient", method = RequestMethod.POST)
+	public ResponseEntity<?> addClient(@RequestBody ClientBean clientBeanArg) {
+
 		ClientBean clientBean = clientService.getClientByName(clientBeanArg);
-		
 		return new ResponseEntity<ClientBean>(clientBean, HttpStatus.OK);
 	}
-	
-	@RequestMapping(value="client/getAllClients",method=RequestMethod.GET)
-    public ResponseEntity<?> getAllClients(){
-    	
-        List<ClientBean> localClientBeans = clientService.getClients();
-		
+
+	@RequestMapping(value = "client/getAllClients", method = RequestMethod.GET)
+	public ResponseEntity<?> getAllClients() {
+
+		List<ClientBean> localClientBeans = clientService.getClients();
+
 		return new ResponseEntity<List<ClientBean>>(localClientBeans, HttpStatus.OK);
-    }
+	}
 }
