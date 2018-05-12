@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.config.ParlourCustomException;
 import com.serivcereport.beans.ClientBean;
 import com.serivcereport.beans.ServiceReportBean;
 import com.servicereport.services.ServiceReportService;
@@ -30,7 +31,7 @@ public class ServiceReportController {
 		
 		serviceReportService.populateParameters(requestArg);
 		List<ServiceReportBean> localServiceReportBeans = serviceReportService.getAllReports();
-	    return new ResponseEntity<List<ServiceReportBean>>(localServiceReportBeans,HttpStatus.OK);
+		return new ResponseEntity<List<ServiceReportBean>>(localServiceReportBeans,HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/addServiceReport",method = RequestMethod.POST)
