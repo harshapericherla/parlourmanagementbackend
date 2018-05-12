@@ -26,6 +26,11 @@ public class ServiceReportController {
 	@Autowired
 	private ServiceReportService serviceReportService;
 	
+	/** This method returns the list of service reports
+	 * @param requestArg
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/getAll",method=RequestMethod.GET)
 	public ResponseEntity<?> getServiceReports(HttpServletRequest requestArg) throws Exception{
 		
@@ -34,6 +39,10 @@ public class ServiceReportController {
 		return new ResponseEntity<List<ServiceReportBean>>(localServiceReportBeans,HttpStatus.OK);
 	}
 	
+	/** This method adds the serviceReport to the database 
+	 * @param serviceReportBeanArg
+	 * @return
+	 */
 	@RequestMapping(value="/addServiceReport",method = RequestMethod.POST)
 	public ResponseEntity<?> addServiceReport(@RequestBody ServiceReportBean serviceReportBeanArg){
 		
@@ -41,6 +50,10 @@ public class ServiceReportController {
 		return new ResponseEntity<ServiceReportBean>(localServiceReportBean,HttpStatus.OK);
 	}
     
+	/** This method is used to edit the serviceReport
+	 * @param serviceReportBeanArg
+	 * @return
+	 */
 	@RequestMapping(value="/editServiceReport",method = RequestMethod.POST)
 	public ResponseEntity<?> editServiceReport(@RequestBody ServiceReportBean serviceReportBeanArg){
 		
@@ -48,6 +61,10 @@ public class ServiceReportController {
 		return new ResponseEntity<ServiceReportBean>(localServiceReportBean,HttpStatus.OK);
 	}
 	
+	/** This method is used to delete the serviceReport
+	 * @param serviceReportBeanArg
+	 * @return
+	 */
 	@RequestMapping(value="/deleteServiceReport",method = RequestMethod.POST)
 	public ResponseEntity<?> deleteServiceReport(@RequestBody ServiceReportBean serviceReportBeanArg){
 		
