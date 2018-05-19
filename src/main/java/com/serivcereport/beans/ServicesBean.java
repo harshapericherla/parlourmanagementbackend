@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="services")
 public class ServicesBean {
@@ -17,25 +20,5 @@ public class ServicesBean {
 	private Integer serviceId;
 	private String serviceName;
 	private String serviceCost;
-	
-	public Integer getServiceId() {
-		return serviceId;
-	}
-	public void setServiceId(Integer serviceId) {
-		this.serviceId = serviceId;
-	}
-	public String getServiceName() {
-		return serviceName;
-	}
-	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
-	}
-	public String getServiceCost() {
-		return serviceCost;
-	}
-	public void setServiceCost(String serviceCost) {
-		this.serviceCost = serviceCost;
-	}
-	
 	
 }

@@ -6,6 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="staff")
 public class StaffBean {
@@ -15,25 +18,5 @@ public class StaffBean {
 	private int staffId;
 	private String staffName;
 	private String staffSalary;
-	
-	public int getStaffId() {
-		return staffId;
-	}
-	public void setStaffId(int staffId) {
-		this.staffId = staffId;
-	}
-	public String getStaffName() {
-		return staffName;
-	}
-	public void setStaffName(String staffName) {
-		this.staffName = staffName;
-	}
-	public String getStaffSalary() {
-		return staffSalary;
-	}
-	public void setStaffSalary(String staffSalary) {
-		this.staffSalary = staffSalary;
-	}
-	
 	
 }

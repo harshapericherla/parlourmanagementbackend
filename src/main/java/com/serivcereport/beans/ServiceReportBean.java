@@ -14,6 +14,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="servicereport")
 public class ServiceReportBean {
@@ -39,50 +42,6 @@ public class ServiceReportBean {
 	
 	private String serviceDiscount;
 	private Date serviceReportDate;
-	
-	public int getServiceReportId() {
-		return serviceReportId;
-	}
-	public void setServiceReportId(int serviceReportId) {
-		this.serviceReportId = serviceReportId;
-	}
-	public ClientBean getClientBean() {
-		return clientBean;
-	}
-	public void setClientBean(ClientBean clientBean) {
-		this.clientBean = clientBean;
-	}
-	public ServicesBean getServiceBean() {
-		return serviceBean;
-	}
-	public void setServiceBean(ServicesBean serviceBean) {
-		this.serviceBean = serviceBean;
-	}
-	public StaffBean getStaffBean() {
-		return staffBean;
-	}
-	public void setStaffBean(StaffBean staffBean) {
-		this.staffBean = staffBean;
-	}
-	public Integer getTotalRecords() {
-		return totalRecords;
-	}
-	public void setTotalRecords(Integer totalRecords) {
-		this.totalRecords = totalRecords;
-	}
-	public String getServiceDiscount() {
-		return serviceDiscount;
-	}
-	public void setServiceDiscount(String serviceDiscount) {
-		this.serviceDiscount = serviceDiscount;
-	}
-	public Date getServiceReportDate() {
-		return serviceReportDate;
-	}
-	public void setServiceReportDate(Date serviceReportDate) {
-		this.serviceReportDate = serviceReportDate;
-	}
-	
 	
 }
 
