@@ -10,16 +10,14 @@ import com.servicereport.dao.StaffDao;
 
 @Service
 public class StaffService {
-
 	@Autowired
 	private StaffDao staffDao;
 	
 	public StaffBean checkIfExistsOrNot(StaffBean staffBeanArg){
 		
 		StaffBean localStaffBean = null;
-		
-        String localStaffName = staffBeanArg.getStaffName();
-		
+        String localStaffName = staffBeanArg.getStaffName();		
+        
         localStaffBean = staffDao.getStaffByName(localStaffName);
 		if(localStaffBean == null){
 			
